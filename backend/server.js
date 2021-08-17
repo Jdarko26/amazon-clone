@@ -37,11 +37,6 @@ app.use((err, req, res, next) => {
 
 const port = process.env.PORT || 5001;
 
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static('frontend/build'));
-}
-
-
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
